@@ -1,0 +1,58 @@
+@use "../../foundation/base" as *;
+
+/* fv
+   ----------------------------------------------------------------- */
+.fv {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.fv-logo {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fv-title {
+  color: $color-text;
+  text-align: center;
+  font-family: $family-A-OTF-UDReiminPro-Medium;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+.fv-img {
+  margin: 0 auto;
+  img {
+    width: auto;
+    height: 75vh;
+  }
+}
+
+/* posts
+   ----------------------------------------------------------------- */
+.posts {
+  padding-top: 100px;
+  padding-bottom: 408px;
+}
+.posts-inner {
+  margin: 0 auto;
+  width: calc(100% - 330px);
+}
+.posts-text {
+  width: fit-content;
+  margin: 0 auto 145px;
+  font-family: $family-A-OTF-UDReiminPro-Medium;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+}
