@@ -12,6 +12,19 @@
       <p class="footer-text">山梨県甲府市大里町3630-1</p>
       <a href="mailto:staff@auro.co.jp" class="footer-email">staff@auro.co.jp</a>
       <a href="tel:055-241-3978" class="footer-tel">055-241-3978</a>
+      <ul class="footer-nav-sp">
+        <li class="footer-link">
+          <a href="https://www.auro.co.jp/info/about-auro.html" target="_blank">アウロの自然塗料</a>
+        </li>
+        <li>/</li>
+        <li class="footer-link">
+          <a href="https://www.auro.co.jp/info/about-auro.html" target="_blank">商品一覧</a>
+        </li>
+        <li>/</li>
+        <li class="footer-link">
+          <a href="https://www.auro.co.jp/info/sample-order/order.html" target="_blank">カタログ請求</a>
+        </li>
+      </ul>
       <ul class="footer-sns">
         <li><a href="https://www.instagram.com/aurojapan/" target="_blank">
           <img src="<?php echo $global_image_path ?>icon-instagram.svg" alt="instagram" width="52" height="52">
@@ -38,17 +51,17 @@
       <li class="shop-text">Online Shop</li>
       <li class="shop-link">
         <a href="http://www.auro-japan.shop/" target="_blank">
-          <img src="<?php echo $global_image_path ?>icon-auro.svg" alt="AUROショップ" width="95" height="51">
+          <img class="auro-icon" src="<?php echo $global_image_path ?>icon-auro.svg" alt="AUROショップ" width="95" height="51">
         </a>
       </li>
       <li class="shop-link">
         <a href="https://store.shopping.yahoo.co.jp/quofirm/" target="_blank">
-          <img src="<?php echo $global_image_path ?>icon-yahoo.svg" alt="yahooショップ" width="51" height="51">
+          <img class="yahoo-icon" src="<?php echo $global_image_path ?>icon-yahoo.svg" alt="yahooショップ" width="51" height="51">
         </a>
       </li>
       <li class="shop-link">
         <a href="https://www.rakuten.ne.jp/gold/quofirm/" target="_blank">
-          <img src="<?php echo $global_image_path ?>icon-rakuten.svg" alt="rakutenショップ" width="51" height="51">
+          <img class="rakuten-icon" src="<?php echo $global_image_path ?>icon-rakuten.svg" alt="rakutenショップ" width="51" height="51">
         </a>
       </li>
     </ul>

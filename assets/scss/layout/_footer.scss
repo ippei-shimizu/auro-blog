@@ -1,17 +1,26 @@
 @use "../foundation/base" as *;
 
 .footer {
-  width: calc(100% - 330px);
-  max-width: 1110px;
+  @include innerWidth;
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  @include media(bp1240) {
+    width: 98%;
+  }
+  @include media(bp1025) {
+    width: calc(100% - 100px);
+  }
 }
 .footer-inner {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   justify-content: center;
   align-items: flex-start;
+  @include media(bp1025) {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
 }
 .company-name {
   font-family: $family-A-OTF-UDReiminPro-Medium;
@@ -57,11 +66,17 @@
   height: 100%;
   background-color: $color-text;
   margin: 0 60px;
+  @include media(bp1025) {
+    display: none;
+  }
 }
 .footer-nav {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  @include media(bp1025) {
+    display: none;
+  }
 }
 .footer-link {
   a {
@@ -85,6 +100,9 @@
   font-weight: 550;
   line-height: normal;
   letter-spacing: 1.8px;
+  @include media(bp1025) {
+    display: none;
+  }
 }
 .footer-btm {
   margin-top: 200px;
@@ -97,5 +115,83 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1.4px;
+  }
+}
+.footer-nav-sp {
+  display: none;
+}
+
+@include media(bp1025) {
+  .footer-nav-sp {
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+    margin-bottom: 37px;
+  }
+}
+
+@include media(bp767) {
+  .footer-inner {
+    row-gap: 6px;
+  }
+  .footer-logo {
+    img {
+      width: 152px;
+    }
+  }
+  .company-name {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+  .footer-text {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .footer-email {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .footer-tel {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 12px 0 21px;
+  }
+  .footer-nav-sp {
+    margin-bottom: 37px;
+  }
+  .footer-link {
+    font-size: 11px;
+    a {
+      font-size: 11px;
+    }
+  }
+  .footer-sns {
+    column-gap: 24px;
+    margin-bottom: 23px;
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .shop-list {
+    flex-direction: initial;
+    column-gap: 22px;
+  }
+  .auro-icon {
+    width: 64.782px;
+  }
+  .yahoo-icon {
+    width: 35.208px;
+  }
+  .rakuten-icon {
+    width: 35.208px;
+  }
+  .footer-btm {
+    margin-top: 100px;
+    padding-bottom: 87px;
+    p {
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
   }
 }

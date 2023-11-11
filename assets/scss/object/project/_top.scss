@@ -32,7 +32,7 @@
 .fv-img {
   margin: 0 auto;
   img {
-    width: auto;
+    width: 100%;
     height: 75vh;
   }
 }
@@ -46,9 +46,8 @@
   z-index: 2;
 }
 .posts-inner {
+  @include innerWidth;
   margin: 0 auto;
-  width: calc(100% - 330px);
-  max-width: 1110px;
 }
 .posts-text {
   width: fit-content;
@@ -159,4 +158,96 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@include media(bp940) {
+  .fv-img {
+    img {
+      height: auto;
+    }
+  }
+}
+
+@include media(bp767) {
+  .fv {
+    overflow: hidden;
+    height: auto;
+  }
+  .fv-logo {
+    margin-top: 38px;
+    img {
+      width: 176px;
+    }
+  }
+  .fv-title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+    letter-spacing: 2.8px;
+  }
+  .fv-img {
+    height: 53vh;
+    position: relative;
+    bottom: -49px;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .posts {
+    padding-top: 95px;
+    padding-bottom: 226px;
+  }
+  .posts-inner {
+    width: calc(100% - 100px);
+  }
+  .posts-text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+    margin-bottom: 89px;
+  }
+  .posts-cat {
+    column-gap: 5px;
+    row-gap: 14px;
+    margin-bottom: 106px;
+  }
+  .posts-cat-name {
+    a {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 550;
+      line-height: normal;
+      padding: 0 18px;
+    }
+  }
+  .posts-list {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .post-img {
+    height: 53.1vw;
+  }
+  .post-detail-link-img {
+    padding-bottom: 25px;
+  }
+  .post-contents-wrap {
+    padding: 0 15px 33px;
+  }
+  .post-cat-name {
+    a {
+      font-size: 14px;
+      padding: 5px 18px;
+    }
+  }
+  .post-title {
+    font-size: 16px;
+    margin: 10px 0 14px;
+  }
+  .post-border {
+    width: 36px;
+    margin-bottom: 16px;
+  }
 }

@@ -1,8 +1,14 @@
+@mixin innerWidth {
+  width: 90%;
+  max-width: 1110px;
+}
+
 $breakpoint-up: (
   "min1980": "screen and (min-width: 1980px)",
-  "bp1200": "screen and (max-width: 1200px)",
+  "bp1240": "screen and (max-width: 1240px)",
   "bp1025": "screen and (max-width: 1025px)",
-  "bp800": "screen and (max-width: 800px)",
+  "bp940": "screen and (max-width: 940px)",
+  "bp767": "screen and (max-width: 767px)",
 ) !default;
 
 @mixin media($breakpoint: "bp767") {

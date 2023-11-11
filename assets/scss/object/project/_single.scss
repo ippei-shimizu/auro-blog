@@ -16,8 +16,7 @@
 }
 .single-nav-link {
   margin: 35px auto 0;
-  width: calc(100% - 330px);
-  max-width: 1110px;
+  @include innerWidth;
   display: flex;
   position: relative;
   z-index: 2;
@@ -150,7 +149,7 @@
       background-color: $color-text;
       position: absolute;
       top: 50%;
-      right: -72px;
+      left: -72px;
       transform: translateY(-50%);
       transition: background-color 0.4s ease;
     }
@@ -171,10 +170,89 @@
     transform: translate(0, -50%);
   }
   50% {
-    transform: translate(20px, -50%);
+    transform: translate(-20px, -50%);
   }
 }
 .single-cat-box {
   position: relative;
   z-index: 2;
+}
+
+@include media(bp767) {
+  .single {
+    padding-bottom: 108px;
+  }
+  .single-fv {
+    height: calc(100svh - 396px);
+  }
+  .single-nav-link {
+    width: calc(100% - 100px);
+    margin-top: 11px;
+    a {
+      font-size: 11px;
+    }
+  }
+  .single-logo {
+    margin: 23px auto 58px;
+    img {
+      width: 126px;
+    }
+  }
+  .single-border {
+    width: 36px;
+  }
+  .single-cat-name {
+    margin: 65px auto 12px;
+    a {
+      font-size: 14px;
+      padding: 5px 18px;
+    }
+  }
+  .single-title {
+    font-size: 18px;
+  }
+  .single-contents {
+    margin-top: 158px;
+    p {
+      font-size: 13px;
+      margin-bottom: 72px;
+    }
+    img {
+      margin-bottom: 72px;
+    }
+    hr {
+      margin-bottom: 72px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+    h3 {
+      font-size: 20px;
+      margin-bottom: 28px;
+    }
+    h4 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    h5,
+    h6 {
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+  }
+  .back-btn {
+    margin-bottom: 100px;
+    width: 70%;
+    text-align: center;
+    a {
+      font-size: 16px;
+      padding: 4.5px 24px;
+      width: 100%;
+      &::after {
+        width: 85px;
+        left: -43px;
+      }
+    }
+  }
 }
