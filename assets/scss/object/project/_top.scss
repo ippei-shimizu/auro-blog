@@ -42,10 +42,13 @@
 .posts {
   padding-top: 100px;
   padding-bottom: 408px;
+  position: relative;
+  z-index: 2;
 }
 .posts-inner {
   margin: 0 auto;
   width: calc(100% - 330px);
+  max-width: 1110px;
 }
 .posts-text {
   width: fit-content;
@@ -54,5 +57,106 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 550;
+  line-height: normal;
+}
+.posts-cat {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 180px;
+}
+.posts-cat-name {
+  a {
+    background-color: $color-text;
+    color: #fff;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 1;
+    font-family: $family-A-OTF-UDReiminPro-Medium;
+    padding: 6.5px 27px;
+    border-radius: 999px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &:hover {
+      background-color: #fff;
+      color: $color-text;
+    }
+  }
+}
+.posts-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 60px;
+}
+.post-item {
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid $color-text;
+}
+.post-detail-link {
+  display: block;
+  &:hover {
+    .post-img {
+      .post {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+.post-detail-link-img {
+  padding-bottom: 30px;
+}
+.post-img {
+  overflow: hidden;
+  height: 17.8vw;
+  .post {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+}
+.post-contents-wrap {
+  padding: 0 18px 40px;
+}
+.post-cat-name {
+  a {
+    color: #fff;
+    font-family: $family-A-OTF-UDReiminPro-Medium;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+    background-color: $color-text;
+    padding: 4px 22px;
+    border-radius: 999px;
+  }
+}
+.post-title {
+  text-align: justify;
+  font-family: $family-A-OTF-UDReiminPro-Medium;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  margin: 12px 0 16px;
+}
+.post-border {
+  width: 43.175px;
+  height: 2px;
+  background-color: $color-text;
+  margin-bottom: 19px;
+}
+.post-excerpt {
+  text-align: justify;
+  font-family: $family-A-OTF-UDReiminPro-Light;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
   line-height: normal;
 }
