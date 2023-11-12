@@ -44,7 +44,7 @@
   </div>
 
   <div class="back-btn">
-    <a href="javascript:history.back()">View Back</a>
+    <a href="javascript:history.back()">Back</a>
   </div>
 
   <div class="single-cat-box">

@@ -81,17 +81,54 @@ AUROは化学物質に依存しない安心安全な製品を提供している�
   wp_reset_postdata();
 ?>
 </div>
-<div class="pagination">
-  <?php
-    $big = 999999999; // need an unlikely integer
-    echo paginate_links( array(
-      'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-      'format' => '/page/%#%',
-      'current' => max(1, get_query_var('page')),
-      'total' => $the_query->max_num_pages
-    ) );
-  ?>
-    </div>
+<?php
+  $big = 999999999; // need an unlikely integer
+  $links = paginate_links( array(
+    'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+    'format' => '/page/%#%',
+    'current' => max(1, get_query_var('page')),
+    'total' => $the_query->max_num_pages,
+    'prev_next' => true,
+    'prev_text' => 'Prev', // 直接文字列を使用
+    'next_text' => 'Next', // 直接文字列を使用
+    'type' => 'array'
+  ));
+
+  if (is_array($links)) {
+      echo '<div class="pagination">';
+
+      // リンクを分類
+      $prev_link = '';
+      $next_link = '';
+      $page_links = [];
+
+      foreach ($links as $link) {
+          if (strpos($link, 'Prev') !== false) {
+              $prev_link = $link;
+          } elseif (strpos($link, 'Next') !== false) {
+              $next_link = $link;
+          } else {
+              $page_links[] = $link;
+          }
+      }
+
+      // Prev link
+      echo '<div class="prev-link">' . $prev_link . '</div>';
+
+      // Page number links
+      echo '<div class="page-num-link">';
+      foreach ($page_links as $link) {
+          echo $link;
+      }
+      echo '</div>';
+
+      // Next link
+      echo '<div class="next-link">' . $next_link . '</div>';
+
+      echo '</div>';
+  }
+?>
+
   </div>
 </div>
 

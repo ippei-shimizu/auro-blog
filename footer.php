@@ -4,7 +4,7 @@
   <div class="footer-inner">
     <div class="footer-logo">
       <a href="https://www.auro.co.jp/">
-        <img src="<?php echo $global_image_path ?>footer-logo.png" alt="AURO" width="323" height="153">
+        <img src="<?php echo $global_image_path ?>footer-logo-2.png" alt="AURO" width="206" height="79">
       </a>
     </div>
     <div class="footer-info">

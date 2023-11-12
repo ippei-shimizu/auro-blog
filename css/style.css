@@ -85,6 +85,10 @@ img {
   }
 }
 
+.footer-logo {
+  margin-right: 62px;
+}
+
 .company-name {
   font-family: "A-OTF-UDReiminPro-Medium";
   font-size: 18px;
@@ -440,6 +444,76 @@ img {
   line-height: normal;
 }
 
+.pagination {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 196px;
+}
+
+.page-num-link {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.page-numbers {
+  font-family: "A-OTF-UDReiminPro-Medium";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.prev-link,
+.next-link {
+  position: relative;
+}
+.prev-link a::before,
+.next-link a::before {
+  content: "";
+  display: block;
+  width: 12.5px;
+  height: 25px;
+  background-color: #553219;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev-link a {
+  padding-left: 32px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.prev-link a::before {
+  -webkit-mask-image: url(../assets/images/prev.svg);
+  mask-image: url(../assets/images/prev.svg);
+  left: 0;
+}
+
+.next-link a {
+  padding-right: 32px;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.next-link a::before {
+  -webkit-mask-image: url(../assets/images/next.svg);
+  mask-image: url(../assets/images/next.svg);
+  right: 0;
+}
+
 @media screen and (max-width: 940px) {
   .fv-img img {
     height: auto;
@@ -522,6 +596,27 @@ img {
   .post-border {
     width: 36px;
     margin-bottom: 16px;
+  }
+  .pagination {
+    margin-top: 111px;
+  }
+  .page-numbers {
+    font-size: 10.56px;
+    letter-spacing: 1.056px;
+  }
+  .prev-link a::before,
+  .next-link a::before {
+    width: 6.6px;
+    height: 13.2px;
+  }
+  .prev-link a {
+    padding-left: 23px;
+  }
+  .next-link a {
+    padding-right: 23px;
+  }
+  .page-num-link {
+    column-gap: 15px;
   }
 }
 .single {
@@ -673,7 +768,7 @@ img {
   border-radius: 999px;
   border: 1px solid #553219;
   background-color: #fff;
-  padding: 7.25px 127px;
+  padding: 7.25px 163.25px;
   position: relative;
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
