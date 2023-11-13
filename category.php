@@ -82,7 +82,7 @@ AUROは化学物質に依存しない安心安全な製品を提供している�
   wp_reset_postdata();
 ?>
 </div>
-<div class="pagination">
+<div class="pagination-cat pagination">
 <?php
     $big = 999999999; // need an unlikely integer
     echo paginate_links( array(

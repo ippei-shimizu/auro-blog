@@ -160,11 +160,14 @@
   line-height: normal;
 }
 .pagination {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 196px;
+  position: relative;
+}
+.pagination-cat {
+  column-gap: 30px;
 }
 .page-num-link {
   display: flex;
@@ -181,7 +184,7 @@
 }
 .prev-link,
 .next-link {
-  position: relative;
+  position: absolute;
   a {
     &::before {
       content: "";
@@ -203,6 +206,7 @@
   }
 }
 .prev-link {
+  left: 0;
   a {
     padding-left: 32px;
     display: block;
@@ -216,6 +220,7 @@
   }
 }
 .next-link {
+  right: 0;
   a {
     padding-right: 32px;
     display: block;
@@ -228,7 +233,16 @@
     }
   }
 }
-
+.prev,
+.next {
+  position: absolute;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
 @include media(bp940) {
   .fv-img {
     img {

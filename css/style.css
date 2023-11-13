@@ -445,11 +445,15 @@ img {
 }
 
 .pagination {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 196px;
+  position: relative;
+}
+
+.pagination-cat {
+  column-gap: 30px;
 }
 
 .page-num-link {
@@ -469,7 +473,7 @@ img {
 
 .prev-link,
 .next-link {
-  position: relative;
+  position: absolute;
 }
 .prev-link a::before,
 .next-link a::before {
@@ -490,6 +494,9 @@ img {
   z-index: 1;
 }
 
+.prev-link {
+  left: 0;
+}
 .prev-link a {
   padding-left: 32px;
   display: block;
@@ -502,6 +509,9 @@ img {
   left: 0;
 }
 
+.next-link {
+  right: 0;
+}
 .next-link a {
   padding-right: 32px;
   display: block;
@@ -511,6 +521,19 @@ img {
 .next-link a::before {
   -webkit-mask-image: url(../assets/images/next.svg);
   mask-image: url(../assets/images/next.svg);
+  right: 0;
+}
+
+.prev,
+.next {
+  position: absolute;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
   right: 0;
 }
 
